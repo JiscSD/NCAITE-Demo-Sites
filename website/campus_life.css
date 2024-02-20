@@ -50,7 +50,7 @@ header nav ul li a {
 }
 
 section#hero {
-    background-image: url('./Img/campus_life.jpg');
+    background-image: url('./img/campus_life.jpg');
     background-size: cover;
     background-position: center;
     color: #fff;
