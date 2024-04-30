@@ -24,7 +24,7 @@ from bs4 import BeautifulSoup
 import re
 
 response = requests.get(
-    "https://www.deeplearning.ai/the-batch/a-roadmap-explores-how-ai-can-detect-and-mitigate-greenhouse-gases/"
+    "https://beta.jiscuni.ai.alpha.jisc.ac.uk/"
 )
 html_doc = response.text
 soup = BeautifulSoup(html_doc, "html.parser")
