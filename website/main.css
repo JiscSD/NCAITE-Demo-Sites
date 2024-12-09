@@ -39,6 +39,10 @@ header nav ul {
     list-style: none;
 }
 
+.nav-links li a:hover {
+    color: #ffcc80;
+}
+
 header nav ul li {
     display: inline-block;
     margin-left: 20px;
@@ -47,6 +51,56 @@ header nav ul li {
 header nav ul li a {
     color: #fff;
     text-decoration: none;
+}
+
+/* Burger menu for mobile */
+.burger {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.burger div {
+    width: 25px;
+    height: 3px;
+    background: white;
+    border-radius: 2px;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background: rgba(0, 0, 0, 0.8);
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        padding: 20px;
+        border-radius: 8px;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .burger {
+        display: flex;
+    }
+}
+
+/* Keyframe animation */
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
 }
 
 section#hero {
@@ -63,6 +117,100 @@ section#hero h1 {
     margin: 0px;
 }
 
+/* Main Container Layout */
+#main-container {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+/* Left Column Styling (About + Carousel) */
+#left-column {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#about {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+#about .container {
+    flex: 1 1 calc(50% - 15px); /* Stacks in two columns */
+    padding: 15px;
+    background: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Carousel Styling */
+#carousel {
+    margin-top: 20px;
+    padding-left: 25%;
+    text-align: center;
+
+}
+
+.carousel-container {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    max-height: 400px;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-slide {
+    flex: 0 0 100%;
+}
+
+.carousel-slide img {
+    object-fit: contain; /* Keeps the whole image visible */
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Right Column Styling (Learnwise Assistant) */
+#right-column {
+    flex: 1;
+    padding: 15px;
+    background: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #main-container {
+        flex-direction: column;
+    }
+
+    #left-column {
+        order: 1;
+    }
+
+    #right-column {
+        order: 2;
+        margin-top: 20px;
+    }
+
+    #about .container {
+        flex: 1 1 100%; /* Stack items vertically on small screens */
+    }
+}
 footer {
     text-align: center;
     padding: 1em;

@@ -168,7 +168,17 @@
         </div>
         </div>
     </section>
-  
+  cript>
+    window.learnWiseSetup = {
+        host: 'https://aiden.learnwise.ai',
+        chatSrc: 'https://chat.learnwise.ai',
+        assistantId: 'N9FrELoOQqEz',
+    };
+
+    var script = document.createElement('script');
+    script.src = window.learnWiseSetup.host + '/chat_launcher.js';
+    document.head.appendChild(script);
+</script>
     <!-- Remaining sections of the website -->
 
     <footer>

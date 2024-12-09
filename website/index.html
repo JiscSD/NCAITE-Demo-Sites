@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fictional University</title>
     <link rel="stylesheet" href="main.css">
-  
+    <script src="scripts.js" defer></script>
 </head>
 
 <body>
@@ -17,15 +17,19 @@
                 <img src="./img/jisc-logo.png" alt="jisc-logo">
             </div>
             <nav>
-                <ul>
+                <ul class="nav-links">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About</a></li>
                     <li><a href="courses.html">Courses</a></li>
                     <li><a href="campus_life.html">Campus Life</a></li>
-                    <li><a href="https://beta.jisc.ac.uk/innovation/national-centre-for-ai">News</a>
-                    </li>
+                    <li><a href="https://beta.jisc.ac.uk/innovation/national-centre-for-ai">News</a></li>
                     <li><a href="https://www.jisc.ac.uk/contact">Contact</a></li>
                 </ul>
+                <div class="burger">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
             </nav>
         </div>
     </header>
@@ -37,42 +41,91 @@
         </div>
     </section>
 
-    <section id="about">
-        <div class="container">
-            <h2>Who we are</h2>
-            <p>The University of Jisc is a leading public research university.</p>
+    <section id="main-container">
+        <!-- Left Column: About Section and Carousel -->
+        <div id="left-column">
+            <!-- About Section -->
+            <div id="about">
+                <div class="container">
+                    <h2>Who we are</h2>
+                    <p>The University of Jisc is a leading public research university.</p>
+                </div>
+                <div class="container">
+                    <h2>AI Map</h2>
+                    <p>See our interactive <a href="https://exploreai.jisc.ac.uk/ai-map">AI Map</a> of institutions
+                        using AI
+                        technologies to improve their processes.</p>
+                </div>
+                <div class="container">
+                    <h2>Explore AI</h2>
+                    <p>Check out our range of interactive demos here at <a href="https://exploreai.jisc.ac.uk/">Explore
+                            AI</a>.</p>
+                </div>
+                <div class="container">
+                    <h2>AI Blog</h2>
+                    <p>Read and sign up for our AI blog here at <a
+                            href="https://nationalcentreforai.jiscinvolve.org/wp/">NCAI Blog</a>.</p>
+                </div>
+            </div>
+
+            <!-- Carousel Section -->
+            <div id="carousel">
+                <h2>Meet Our Students</h2>
+                <div class="carousel-container">
+                    <div class="carousel-track">
+                        <div class="carousel-slide">
+                            <img src="./img/carousel/business_student.jpg" alt="Student 1">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="./img/carousel/girl_student.jpg" alt="Student 2">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="./img/carousel/reading.jpg" alt="Student 3">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="./img/carousel/stu_lap.jpg" alt="Student 2">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="./img/carousel/two_students.jpg" alt="Student 3">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="./img/carousel/uni_colum.jpg" alt="Student 3">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Column: Learnwise Assistant -->
+        <div id="right-column">
+            <h2>Learnwise Assistant</h2>
+            <iframe src="https://chat.learnwise.ai/?assistantId=N9FrELoOQqEz&isolatedIframe=true" width="100%"
+                height="500" title="Interactive Chat Assistant"></iframe>
         </div>
     </section>
 
-    <section id="about">
-        <div class="container">
-            <h2>AI Map</h2>
-            <p>See out our interactive <a href="https://exploreai.jisc.ac.uk/ai-map">AI Map</a> of
-                institutions using AI technologies to improve their processes.</p>
-    </section>
+
+<script>
+    window.learnWiseSetup = {
+        host: 'https://aiden.learnwise.ai',
+        chatSrc: 'https://chat.learnwise.ai',
+        assistantId: 'N9FrELoOQqEz',
+    };
+
+    var script = document.createElement('script');
+    script.src = window.learnWiseSetup.host + '/chat_launcher.js';
+    document.head.appendChild(script);
+</script>
 
 
-    <section id="about">
-        <div class="container">
-            <h2>Explore AI</h2>
-            <p>Check out our range of interactive demo's here at <a href="https://exploreai.jisc.ac.uk/">Explore AI.</a></p>
-        </div>
-    </section>
 
-    <section id="about">
-        <div class="container">
-            <h2>AI Blog</h2>
-            <p>Read and sign up for our AI blog here at <a href="https://nationalcentreforai.jiscinvolve.org/wp/">NCAI Blog.</a></p>
-        </div>
-    </section>
-    
 
     <!-- Remaining sections of the website -->
 
     <footer>
 
-        
-            <p> 2023 Jisc University. All rights reserved.</p>
+
+        <p> 2023 Jisc University. All rights reserved.</p>
         </div>
     </footer>
 </body>

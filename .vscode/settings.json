@@ -3,5 +3,6 @@
         "botsonic",
         "jisc",
         "NCAI"
-    ]
+    ],
+    "liveServer.settings.port": 5501
 }
